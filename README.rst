@@ -15,7 +15,7 @@ Building ONIE
 The recommended way to set up an ONIE build environment is to use a Docker image, as described
 in the ONIE Documentation under `Preparing An ONIE Build Environment <https://opencomputeproject.github.io/onie/developers/building.html#preparing-an-onie-build-environment>`_.
 
-Go to onie/contrib/build-env/Readme.md
+Go to https://github.com/aka4czaku/onie/tree/master/contrib/build-env for more information.
 
 
 ******************************
