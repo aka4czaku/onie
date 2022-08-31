@@ -592,12 +592,12 @@ machine-prefix:
 DEBIAN_BUILD_HOST_PACKAGES	= build-essential stgit u-boot-tools util-linux \
 				  gperf device-tree-compiler python-all-dev xorriso \
 				  autoconf automake bison flex texinfo libtool libtool-bin \
-				  gawk libncurses5 libncurses5-dev bc \
+				  gawk libncurses5 libncurses5-dev bc autopoint \
 				  dosfstools mtools pkg-config git wget help2man libexpat1 \
-				  libexpat1-dev fakeroot python-sphinx rst2pdf \
-				  libefivar-dev libnss3-tools libnss3-dev libpopt-dev \
+				  libexpat1-dev fakeroot python3.8-dev tree rst2pdf \
+				  libefivar-dev libnss3-tools libnss3-dev libpopt-dev libelf-dev \
 				  libssl-dev sbsigntool uuid-runtime uuid-dev cpio \
-				  bsdmainutils unzip
+				  bsdmainutils unzip 
 
 PHONY += debian-prepare-build-host
 debian-prepare-build-host:
