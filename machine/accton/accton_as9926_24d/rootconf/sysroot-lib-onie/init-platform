@@ -15,14 +15,13 @@
 # the architecture initializations.
 init_platform_pre_arch()
 {
-    local ipmi_log=$(mktemp)
-    _log_info_msg "Info: Disabling IPMI Watchdog... "
-    ipmitool mc watchdog off >$ipmi_log 2>&1
+    _log_info_msg "Info: Setting TX-Enable on OOBF ports... "
+    i2cset -y -f 0 0x77 0x01 >/dev/null 2>&1
+    i2cset -y -f 0 0x76 0x10 >/dev/null 2>&1
+    i2cset -y -f 0 0x62 0x21 0x00 >/dev/null 2>&1
     if [ $? -eq 0 ] ; then
         _log_info_msg "done.\n"
     else
         _log_info_msg "failed.\n"
-        cat $ipmi_log
     fi
-    rm -f $ipmi_log
 }
